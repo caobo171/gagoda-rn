@@ -1,0 +1,56 @@
+{
+  "name": "gagodarn",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "android": "react-native run-android",
+    "ios": "react-native run-ios",
+    "start": "react-native start",
+    "test": "jest",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "@react-native-community/async-storage": "^1.8.1",
+    "@react-native-community/masked-view": "^0.1.7",
+    "@react-navigation/material-top-tabs": "^5.1.1",
+    "@react-navigation/native": "^5.0.9",
+    "react": "16.9.0",
+    "react-native": "0.61.5",
+    "react-native-gesture-handler": "^1.6.0",
+    "react-native-iphone-x-helper": "^1.2.1",
+    "react-native-reanimated": "^1.7.0",
+    "react-native-safe-area-context": "^0.7.3",
+    "react-native-screens": "^2.3.0",
+    "react-native-tab-view": "^2.13.0",
+    "react-native-vector-icons": "^6.6.0",
+    "react-redux": "^7.2.0",
+    "react-use": "^13.27.0",
+    "redux": "^4.0.5",
+    "redux-devtools-extension": "^2.13.8",
+    "redux-persist": "^6.0.0",
+    "styled-components": "^5.0.1",
+    "typesafe-actions": "^5.1.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.6.2",
+    "@babel/runtime": "^7.6.2",
+    "@react-native-community/eslint-config": "^0.0.5",
+    "@types/jest": "^25.1.4",
+    "@types/react": "^16.9.23",
+    "@types/react-native": "^0.61.22",
+    "@types/react-redux": "^7.1.7",
+    "@types/react-test-renderer": "^16.9.2",
+    "@types/redux": "^3.6.0",
+    "@types/styled-components": "^5.0.1",
+    "babel-jest": "^24.9.0",
+    "babel-plugin-module-resolver": "^4.0.0",
+    "eslint": "^6.5.1",
+    "jest": "^24.9.0",
+    "metro-react-native-babel-preset": "^0.56.0",
+    "react-test-renderer": "16.9.0",
+    "typescript": "^3.8.3"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}
