@@ -57,5 +57,12 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
+
+
+	<!-- For camera permission-->
+	<key>NSCameraUsageDescription</key>
+	<string>Using for image search</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Using for image search</string>
 </dict>
 </plist>
