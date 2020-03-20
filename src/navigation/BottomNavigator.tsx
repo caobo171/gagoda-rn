@@ -10,6 +10,12 @@ import {getBottomSpace } from 'react-native-iphone-x-helper';
 
 const Tab = createMaterialTopTabNavigator();
 
+interface Props{
+    color:string
+}
+const renderTabarHomeIcon = ({ color }) => <Icon name={'home'} color={color} size={24} />
+const renderTabarSearchIcon  = ({ color }) => <Icon name={'search1'} color={color} size={24} />
+
 const BottomNavigator = React.memo(()=> {
     return (
         <Tab.Navigator
@@ -24,8 +30,8 @@ const BottomNavigator = React.memo(()=> {
             },
             showIcon: true,
             showLabel: false,
-            activeTintColor: 'orange',
-            inactiveTintColor: '#595959',
+            activeTintColor: '#525252',
+            inactiveTintColor: '#a1a1a1',
             renderIndicator: () => null
         }}
         lazy ={ true}
@@ -33,12 +39,12 @@ const BottomNavigator = React.memo(()=> {
         >
             <Tab.Screen name={'Home'} component={Home}
                 options={{
-                    tabBarIcon: ({ color }) => <Icon name={'home'} color={color} size={24} />
+                    tabBarIcon: renderTabarHomeIcon
                 }}
             />
             <Tab.Screen name={'Search'} component={Search}
                 options={{
-                    tabBarIcon: ({ color }) => <Icon name={'search1'} color={color} size={24} />
+                    tabBarIcon: renderTabarSearchIcon
                 }}
             />
         </Tab.Navigator>

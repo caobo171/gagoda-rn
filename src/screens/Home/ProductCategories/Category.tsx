@@ -9,12 +9,12 @@ export const CATEGORY_ITEM_WIDTH = 120 ;
 const StyledWrapper = styled.View`
     width: ${CATEGORY_ITEM_WIDTH}px;
     align-items: center;
-    height: 120px;
+    height: 132px;
 `
 
 const StyledImage = styled.Image`
-    flex: 3;
-    width: 100%;
+    height: 120px;
+    width: 120px;
     resize-mode: stretch;
 `
 

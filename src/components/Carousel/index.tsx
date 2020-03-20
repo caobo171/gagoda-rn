@@ -24,7 +24,7 @@ const StyledSwiper = styled(Swiper)`
 `
 
 const StyledWraper = styled.View`
-    height: 25%;
+    height: 200px;
 `
 
 

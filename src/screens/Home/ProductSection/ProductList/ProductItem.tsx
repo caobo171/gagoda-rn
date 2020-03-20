@@ -10,18 +10,20 @@ export const PRODUCT_ITEM_WIDTH = 120 ;
 const StyledWrapper = styled.View`
     flex: 1;
     width: ${PRODUCT_ITEM_WIDTH}px;
-    align-items: center;
+    align-items: flex-start;
 `
 
 const StyledImage = styled.Image`
-    flex: 3;
-    width: 100%;
+    height: 120px;
+    width: 120px;
     resize-mode: stretch;
 `
 
 const StyledName = styled.Text<{theme: CustomTheme}>`
     color: ${props=> props.theme.textColorH2};
-    font-weight: 700;
+    font-weight: 400;
+    margin-top: 8px;
+    font-size: 12px;
 `
 
 

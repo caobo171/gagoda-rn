@@ -10,6 +10,7 @@ const StyledWrapper = styled.View`
     align-items: center;
     height: 48px;
     padding: 8px  12px;
+    margin-bottom: 8px;
 `
 
 const StyledSearchBox = styled.View<{theme: CustomTheme}>`
@@ -32,8 +33,9 @@ const StyledTextInput = styled.TextInput`
 `
 
 const StyledCameraIcon = styled(Icon)`
-    font-size: 24px;
-    margin-left: 8px;
+    font-size: 28px;
+    margin-left: 12px;
+    opacity: 0.6;
 `
 
 const SearchBox = React.memo(()=>{
@@ -46,7 +48,12 @@ const SearchBox = React.memo(()=>{
             </StyledSearchBox>
         
             <Touchable onPress={()=>console.log('aa')}>
-                <StyledCameraIcon name={'camera'} />
+                <StyledCameraIcon name={'camerao'} />
+            </Touchable>
+
+
+            <Touchable onPress={()=>console.log('aa')}>
+                <StyledCameraIcon name={'shoppingcart'} />
             </Touchable>
   
         </StyledWrapper>
