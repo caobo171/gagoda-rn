@@ -13,14 +13,20 @@ import StatusBarView from '@/components/UI/StatusBarView';
 import { PersistGate } from 'redux-persist/integration/react'
 import store, { persistedStore } from '@/store/store';
 import { Provider } from 'react-redux';
+import ThemeWrapper from '@/store/theme/ThemeWrapper';
+
+
+console.disableYellowBox = true;
 
 const App = () => {
   return (
     <NavigationContainer>
       <Provider store={store}>
         <PersistGate persistor={persistedStore}>
-          <StatusBarView />
-          <BottomNavigator />
+          <ThemeWrapper>
+            <StatusBarView />
+            <BottomNavigator />
+          </ThemeWrapper>
         </PersistGate>
       </Provider>
     </NavigationContainer>

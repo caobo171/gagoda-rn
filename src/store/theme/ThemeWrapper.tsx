@@ -15,6 +15,7 @@ export interface CustomTheme  extends DefaultTheme{
     name: string,
     backgroundColor: string
     secondaryBackgroundColor: string,
+
     primaryColor: string,
     secondaryColor: string,
     underlayColor: string,
@@ -34,12 +35,12 @@ export const getTheme = (mode: ThemeMode) : CustomTheme =>{
             secondaryBackgroundColor: '#f8f8f8',
             primaryColor: '#595959',
             secondaryColor: '#ffffff',
-            underlayColor: '#F9F9F9',
+            underlayColor: '#f0f0f0',
             textColorH1: '#4a4a4a',
             textColorH2: '#5e5e5e',
             textColorH3: '#8c8c8c',
             submitButtonColor: '#595959',
-            inputUnderPrimaryBackgroundColor: '#ffffff' ,
+            inputUnderPrimaryBackgroundColor: '#e6e6e6' ,
             borderSectionColor: '#d4d4d4'
         }
     }else{
