@@ -3,6 +3,7 @@ import styled from 'styled-components/native';
 import {CustomTheme } from '@store/theme/ThemeWrapper';
 import ProductList from './ProductList';
 import Touchable from '@/components/UI/Touchable';
+import { ProductType } from '@/store/product/types';
 
 const StyledWrapper = styled.View`
     padding: 8px;
@@ -28,10 +29,16 @@ const StyledReadmore = styled.Text<{theme: CustomTheme}>`
     color: ${props=> props.theme.textColorH1};
     font-size: 16px;
     margin-bottom: 8px;
-    text-decoration-line : underline;
 `
 
-const ProductSection = React.memo(()=>{
+interface Props{
+    title:string,
+    products: ProductType[]
+}
+
+const ProductSection = React.memo(({title, products}: Props)=>{
+
+    console.log('title', title, products);
     return(
         <>
        <StyledSeperator/>
@@ -39,18 +46,18 @@ const ProductSection = React.memo(()=>{
      
             <StyledHeaderRow>
                 <StyledLabel>
-                    {'Danh muc'}
+                    {title}
                 </StyledLabel>
                 <Touchable>
                     <StyledReadmore>
-                        {'Xem them'}
+                        {'Xem thêm'}
                     </StyledReadmore>
                 </Touchable>
          
             </StyledHeaderRow>
           
             
-            <ProductList/>
+            <ProductList products={products}/>
         </StyledWrapper>
         </>
     )

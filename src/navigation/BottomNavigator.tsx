@@ -44,7 +44,8 @@ const BottomNavigator = React.memo(()=> {
             />
             <Tab.Screen name={'Search'} component={Search}
                 options={{
-                    tabBarIcon: renderTabarSearchIcon
+                    tabBarIcon: renderTabarSearchIcon,
+                    
                 }}
             />
         </Tab.Navigator>

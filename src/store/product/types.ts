@@ -1,3 +1,13 @@
+export interface State {
+    newestProducts: ProductType[],
+    bestsellerProducts: ProductType[],
+    saleProducts: ProductType[]
+}
+
+// export interface ProductMap {
+//     [key:number]: ProductType
+// }
+
 export interface ProductType {
     productId: number
     categoryId: number
@@ -8,12 +18,12 @@ export interface ProductType {
     description: string
     download: number
     status: boolean
-    rate? : string
+    rate? : number
     searchKey? :string
     updateTime: string
     images: string
     variants: VariantType[]
-    files: null,
+    files: FileType[],
     media: MediaType[]
 }
 
@@ -26,6 +36,15 @@ export interface VariantType {
     shop: ShopType[],
     images: MediaType[],
     attribute: AttributeType[]
+}
+
+
+export interface FileType{
+    id:number,
+    name:null | string,
+    productId:number,
+    link:string,
+    softwareId:number
 }
 
 

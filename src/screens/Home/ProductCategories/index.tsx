@@ -5,6 +5,7 @@ import Category, {CATEGORY_ITEM_WIDTH} from './Category';
 import useAsyncFn from 'react-use/lib/useAsyncFn';
 import useEffectOnce from 'react-use/lib/useEffectOnce';
 import {CustomTheme } from '@store/theme/ThemeWrapper';
+import { CategoryNodeType } from '@/store/category/types';
 
 const StyledWrapper = styled.View`
     height: 160px;
@@ -34,27 +35,20 @@ const getItemLayout= (data, index) => (
     {length: CATEGORY_ITEM_WIDTH, offset: CATEGORY_ITEM_WIDTH * index, index}
 );
 
+interface Props{
+    categories: CategoryNodeType[]
+}
 
-const ProductCategories = React.memo(()=>{
-
-    const [status, fetch ] = useAsyncFn(async()=>{
-        return false
-    },[])
-
-    useEffectOnce(()=>{
-        fetch();
-    })
-
+const ProductCategories = React.memo(({categories}: Props)=>{
     return(
         <StyledWrapper>
         
         <StyledLabel>
-            {'Danh muc'}
+            {'Danh Mục Sản phẩm '}
         </StyledLabel>
         <FlatList 
             horizontal={true}
-            refreshing={status.loading}
-            data={res.data}
+            data={categories}
             renderItem={renderItem}
             ItemSeparatorComponent={Seperator}
             getItemLayout = {getItemLayout}

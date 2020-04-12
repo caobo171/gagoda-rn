@@ -6,6 +6,7 @@ import useAsyncFn from 'react-use/lib/useAsyncFn'
 import useEffectOnce from 'react-use/lib/useEffectOnce'
 
 import {CustomTheme } from '@store/theme/ThemeWrapper';
+import { ProductType } from '@/store/product/types';
 
 const StyledWrapper = styled.View`
     height: 192px;
@@ -32,31 +33,30 @@ const getItemLayout= (data, index) => (
     {length: PRODUCT_ITEM_WIDTH, offset: PRODUCT_ITEM_WIDTH * index, index}
 );
 
+interface Props{
+    products: ProductType[]
+}
+const ProductList = React.memo(({products}: Props)=>{
 
-const ProductList = React.memo(()=>{
-
-    const [status, fetch ] = useAsyncFn(async()=>{
-        return false
-    },[])
-
-    useEffectOnce(()=>{
-        fetch();
-    })
+    console.log('check product', products);
 
     return(
         <StyledWrapper>
         
-
-        <FlatList 
+       {
+           products.length > 0 && (
+            <FlatList 
             horizontal={true}
-            refreshing={status.loading}
-            data={res.data}
+            data={products}
             renderItem={renderItem}
             getItemLayout = {getItemLayout}
             ItemSeparatorComponent={Seperator}
             //@ts-ignore
             keyExtractor={ item => item.id}
         />
+           )
+       }
+
         </StyledWrapper>
 
     )

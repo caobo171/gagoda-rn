@@ -9,7 +9,7 @@ const persistConfig = {
     storage: AsyncStorage
   }
   
-  const persistedReducer = persistReducer(persistConfig, rootReducer)
+const persistedReducer = persistReducer(persistConfig, rootReducer)
 
 const middlewares = [];
 
@@ -17,7 +17,9 @@ const enhancer = composeWithDevTools(applyMiddleware(...middlewares))
 
 
 
-const store = createStore(persistedReducer, enhancer)
-export const persistedStore = persistStore(store);
+// const store = createStore(persistedReducer, enhancer)
+// export const persistedStore = persistStore(store);
+
+const store = createStore(rootReducer, enhancer);
 
 export default store; 

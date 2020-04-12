@@ -35,8 +35,8 @@ interface ProductProps {
 const ProductItem = React.memo(({product}: ProductProps)=>{
     return (
         <StyledWrapper>
-            <StyledImage 
-             source ={{uri: product.variants[0].images[0].imageUrl}}/>
+            {/* <StyledImage 
+             source ={{uri: product.variants[0].images[0].imageUrl}}/> */}
             <StyledName>{product.name}</StyledName>
         </StyledWrapper>
     )

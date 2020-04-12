@@ -1,3 +1,7 @@
+export interface State{
+    categories: CategoryNodeType[]
+}
+
 export interface CategoryNodeType {
     id: number, 
     code: null , 

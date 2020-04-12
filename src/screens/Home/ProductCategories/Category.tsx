@@ -32,8 +32,6 @@ interface CategoryProps {
 const Category = React.memo(({category}: CategoryProps)=>{
     return (
         <StyledWrapper>
-
-
             <StyledImage 
              source ={{uri: category.avatar}}/>
             <StyledName>{category.name}</StyledName>
